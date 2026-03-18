@@ -1,0 +1,26 @@
+#+title: void-linux-zen
+
+** Table of Contents :toc:
+  - [[#installation][Installation]]
+  - [[#source][Source]]
+
+** Installation
+
+***  Trush the repository keys
+#+begin_src shell
+sudo mkdir -p /var/db/xbps/keys
+sudo curl -Lo /var/db/xbps/keys/c0pt4n-public.pem https://raw.githubusercontent.com/c0pt4n/void-linux-zen/master/c0pt4n-public.pem
+#+end_src
+
+*** Add the repository configuration
+#+begin_src shell
+echo "repository=https://github.com/c0pt4n/void-linux-zen/releases/download/stable"
+#+end_src
+
+*** Sync and install
+#+begin_src shell
+sudo xbps-install -S linux-zen6.19 linux-zen6.19-headers
+#+end_src
+
+** Source
+https://github.com/c0pt4n/void-packages/tree/master/srcpkgs/linux6.19-zen
