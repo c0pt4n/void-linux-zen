@@ -6,15 +6,9 @@
 
 ** Installation
 
-***  Trush the repository keys
-#+begin_src shell
-sudo mkdir -p /var/db/xbps/keys
-sudo curl -Lo /var/db/xbps/keys/c0pt4n-public.pem https://raw.githubusercontent.com/c0pt4n/void-linux-zen/master/c0pt4n-public.pem
-#+end_src
-
 *** Add the repository configuration
 #+begin_src shell
-echo "repository=https://github.com/c0pt4n/void-linux-zen/releases/download/stable"
+echo "repository=https://github.com/c0pt4n/void-linux-zen/releases/download/latest" > /etc/xbps.d/10-zen.conf
 #+end_src
 
 *** Sync and install
